@@ -1,0 +1,12 @@
+#!/bin/bash
+
+echo "=== Pasword checker ==="
+
+password_benar="devops123"
+percobaan=0
+maks=3
+
+while [ $percobaan -lt $maks ]
+do
+	read -p "Masukkan password: " input
+
