@@ -1,0 +1,10 @@
+name: CI pertama saya
+
+on: push
+
+jobs:
+  halo:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Cetak Pesan
+        run: echo "halo dari github actions!"
