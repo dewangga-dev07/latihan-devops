@@ -6,5 +6,8 @@ jobs:
   halo:
     runs-on: ubuntu-latest
     steps:
+      - name: CHeckout/code
+        uses: actions/checkout@v4
+
       - name: Cetak Pesan
-        run: echo "halo dari github actions!"
+        run: docker build -t halo-image .
