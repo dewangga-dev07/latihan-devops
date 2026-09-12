@@ -6,7 +6,7 @@ jobs:
   halo:
     runs-on: ubuntu-latest
     steps:
-      - name: CHeckout/code
+      - name: Checkout/code
         uses: actions/checkout@v4
 
       - name: Cetak Pesan
