@@ -9,5 +9,8 @@ jobs:
       - name: Checkout/code
         uses: actions/checkout@v4
 
+      - name: Tampilakn Secret
+        run: echo "pesannya adalah ${{ secret.PESAN_RAHASIA }}"
+
       - name: Cetak Pesan
         run: docker build -t halo-image .
