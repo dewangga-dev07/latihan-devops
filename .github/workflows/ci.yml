@@ -9,8 +9,17 @@ jobs:
       - name: Checkout/code
         uses: actions/checkout@v4
 
-      - name: Cetak Pesan
-        run: docker build -t halo-image .
+      - name: login ke Docker Hub
+        uses: docker/login-action@v3
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+
+      - name: cetak pesan
+        run: docker build -t dewadevops/halo-image .
+
+      - name: ngepush ke docker
+        run: docker push  dewadevops/halo-image
 
       - name: Pesan Rahasia
         run: echo "pesan rahasianya adalah ${{ secrets.PESAN_RAHASIA }}"
